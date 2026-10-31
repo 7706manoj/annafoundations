@@ -98,7 +98,7 @@ export default function Home() {
 
 <a href="#home" className="brand">
   <Image
-    src="/images/logo.png"
+    src="/images/Logo.png"
     alt="ANNA FOUNDATIONS logo"
     width={60}
     height={60}
