@@ -456,7 +456,7 @@ export default function Home() {
 
         <div className="social-links">
           <a
-            href="https://www.instagram.com/YOUR_USERNAME/"
+            href="https://www.instagram.com/`"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -469,7 +469,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://www.youtube.com/@YOUR_CHANNEL"
+            href="https://www.youtube.com/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
