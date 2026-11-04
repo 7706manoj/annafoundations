@@ -1,4 +1,8 @@
+
+"use client";
 import Image from "next/image";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Phone, Mail } from "lucide-react";
 const services = [
   {
@@ -72,63 +76,97 @@ const scriptures = [
 const leaders = [
   {
     name: "Dr. GARLAPATI NARAYANA",
-    role: "Chairman",
+    role: "Founder/Chairman of Trust",
     image: "/images/founder.png",
   },
 
   {
     name: "Mr. GUDISA NARASIMHA RAO",
-    role: "Vice Chairman",
+    role: "Trustee/Vice Chairman",
     image: "/images/vice-chairman.png",
   },
   {
     name: "Mrs. GARLAPATI PRAMEELA ",
-    role: "Treasurer",
+    role: "Trustee/Treasurer",
     image: "/images/treasurer.png",
+  },
+   {
+    name: "Mrs. Shaik Saidabee ",
+    role: "Trustee",
+    image: "/images/trustee.png",
   },
 ];
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main id="home">
-      
-
-
+  
 <header className="header">
+  <a href="#home" className="brand">
+    <Image
+      src="/images/Logo.png"
+      alt="ANNA FOUNDATIONS logo"
+      width={60}
+      height={60}
+      priority
+      className="brand-logo"
+    />
 
-<a href="#home" className="brand">
-  <Image
-    src="/images/Logo.png"
-    alt="ANNA FOUNDATIONS logo"
-    width={60}
-    height={60}
-    priority
-    className="brand-logo"
-  />
-
-  <span className="brand-text">
-    <span className="brand-name">
-      <strong className="brand-anna">ANNA</strong>
-      <strong className="brand-foundations">FOUNDATIONS</strong>
+    <span className="brand-text">
+      <span className="brand-name">
+        <strong className="brand-anna">ANNA</strong>
+        <strong className="brand-foundations">FOUNDATIONS</strong>
+      </span>
+      <small>Regd. No. 170/2026</small>
     </span>
-    <small>Regd. No. 170/2026</small>
-  </span>
-</a>
+  </a>
 
+  {/* Desktop Navigation */}
+  <nav className="nav desktop-nav">
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Our Work</a>
+    <a href="#scripture">Scripture</a>
+    <a href="#leadership">Our Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        <nav className="nav" aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#services">Our Work</a>
-          <a href="#scripture">Scripture</a>
-          <a href="#leadership">Our Team</a>
-          <a href="#contact">Contact</a>
-        </nav>
+  <a className="button header-button desktop-button" href="#contact">
+    Get Involved
+  </a>
 
-        <a className="button header-button" href="#contact">
-          Get Involved
-        </a>
-      </header>
+  {/* Mobile Hamburger Button */}
+  <button
+    className="mobile-menu-button"
+    onClick={() => setMenuOpen(!menuOpen)}
+    aria-label={menuOpen ? "Close menu" : "Open menu"}
+    aria-expanded={menuOpen}
+  >
+    {menuOpen ? <X size={26} /> : <Menu size={26} />}
+  </button>
+
+  {/* Mobile Navigation */}
+ {menuOpen && (
+  <nav className="mobile-nav">
+    <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+    <a href="#about" onClick={() => setMenuOpen(false)}>About Us</a>
+    <a href="#services" onClick={() => setMenuOpen(false)}>Our Work</a>
+    <a href="#scripture" onClick={() => setMenuOpen(false)}>Scripture</a>
+    <a href="#leadership" onClick={() => setMenuOpen(false)}>Our Team</a>
+    <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+
+    <a
+      className="button mobile-get-involved"
+      href="#contact"
+      onClick={() => setMenuOpen(false)}
+    >
+      Get Involved
+    </a>
+  </nav>
+)}
+</header>
+
 
       <section className="hero">
         <div className="hero-content">
