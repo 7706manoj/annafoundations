@@ -93,7 +93,7 @@ const leaders = [
    {
     name: "Mrs. Shaik Saidabee ",
     role: "Trustee",
-    image: "/images/trustee.png",
+    image: "/images/Trustee.png",
   },
 ];
 
