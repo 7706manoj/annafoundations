@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Phone, Mail } from "lucide-react";
+
 const services = [
   {
     title: "Food Distribution",
@@ -52,21 +53,21 @@ const services = [
 const scriptures = [
   {
     verse:
-      "He that hath pity upon the poor lendeth unto the LORD; and that which he hath given will he pay him again.",
+      "Whoever is kind to the poor lends to the LORD, and he will reward them for what they have done.",
     reference: "Proverbs 19:17",
   },
   {
     verse:
-      "As we have therefore opportunity, let us do good unto all men.",
+      "Therefore, as we have opportunity, let us do good to all people, especially to those who belong to the family of believers.",
     reference: "Galatians 6:10",
   },
   {
-    verse: "By love serve one another.",
+    verse: "Rather, serve one another humbly in love.",
     reference: "Galatians 5:13",
   },
   {
     verse:
-      "Even so faith, if it hath not works, is dead, being alone.",
+      "In the same way, faith by itself, if it is not accompanied by action, is dead.",
     reference: "James 2:17",
   },
 ];
@@ -174,11 +175,10 @@ export default function Home() {
           <h1>Serving the Needy Is Serving Christ.</h1>
 
           <p className="hero-verse">
-            “Inasmuch as ye have done it unto one of the least of
-            these my brethren, ye have done it unto me.”
+            “Truly I tell you, whatever you did for one of the least of these brothers and sisters of mine, you did for me.”
           </p>
 
-          <p className="verse-reference">MATTHEW 25:40 · KJV</p>
+          <p className="verse-reference">MATTHEW 25:40 · NIV</p>
 
           <p className="hero-description">
             ANNA FOUNDATIONS is dedicated to serving poor and needy
@@ -327,7 +327,7 @@ export default function Home() {
         </div>
 
         <p className="program-note">
-          These are the foundation's proposed service areas. Specific
+          These are the foundation proposed service areas. Specific
           activities and programmes will be published as they are confirmed.
         </p>
       </section>
@@ -340,11 +340,10 @@ export default function Home() {
           </span>
 
           <h2>
-            “Pure religion and undefiled before God and the Father
-            is this, To visit the fatherless and widows in their affliction…”
+            “Religion that God our Father accepts as pure and faultless is this: to look after orphans and widows in their distress and to keep oneself from being polluted by the world.”
           </h2>
 
-          <p className="verse-reference">JAMES 1:27 · KJV</p>
+          <p className="verse-reference">JAMES 1:27 · NIV</p>
 
           <p>
             Caring for orphans, widows, and vulnerable people is an
@@ -371,7 +370,7 @@ export default function Home() {
             <article className="verse-card" key={item.reference}>
               <span className="verse-card-icon">✦</span>
               <blockquote>“{item.verse}”</blockquote>
-              <p>{item.reference} · KJV</p>
+              <p>{item.reference} · NIV</p>
             </article>
           ))}
         </div>
@@ -494,28 +493,56 @@ export default function Home() {
 
         <div className="social-links">
           <a
-            href="https://www.instagram.com/`"
+            href="https://www.instagram.com/anna.foundations/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
           >
-            <svg viewBox="0 0 24 24" className="instagram-icon">
-              <rect x="3" y="3" width="18" height="18" rx="5" />
-              <circle cx="12" cy="12" r="4" />
-              <circle cx="17.5" cy="6.5" r="1" />
-            </svg>
+          <svg viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <linearGradient id="instagramGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#FFDC80" />
+      <stop offset="25%" stopColor="#FCAF45" />
+      <stop offset="50%" stopColor="#F77737" />
+      <stop offset="75%" stopColor="#C13584" />
+      <stop offset="100%" stopColor="#833AB4" />
+    </linearGradient>
+  </defs>
+  <path
+    fill="url(#instagramGradient)"
+    d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"
+  />
+</svg>
           </a>
 
           <a
-            href="https://www.youtube.com/"
+            href="https://www.youtube.com/@annafoundations"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
           >
-            <svg viewBox="0 0 24 24" className="youtube-icon">
-              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z" />
-            </svg>
+           <svg viewBox="0 0 24 24" width="24" height="24" fill="#FF0000">
+  <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/>
+</svg>
           </a>
+  <a
+  href="https://www.facebook.com/share/1CDBWE7uP1/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Facebook"
+  className="facebook-social"
+>
+  <svg
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    fill="#1877F2"
+    aria-hidden="true"
+  >
+    <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.093 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.973h-1.514c-1.491 0-1.955.93-1.955 1.887v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.093 24 18.1 24 12.073z"/>
+  </svg>
+</a>
+
         </div>
       </div>
     </div>
